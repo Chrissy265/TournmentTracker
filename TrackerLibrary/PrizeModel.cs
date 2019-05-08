@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary
 {
-    class PrizeModel
+  public  class PrizeModel
     {
+        public int Id { get; set; }  //unique identifer for the prize
         /// <summary>
         /// Team placement number of the tournment ex. 1st, 2, 3, and etc
         /// </summary>

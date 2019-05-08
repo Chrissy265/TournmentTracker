@@ -16,5 +16,29 @@ namespace TrackerUI
         {
             InitializeComponent();
         }
+
+        private void CreatePrizeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private bool ValidateForm()
+        {
+            bool output = true;
+            int placeNumber = 0;
+            bool placeNumberValidNumber = int.TryParse(PlaceNumberValueTextBox.Text, out placeNumber); 
+
+            if(!placeNumberValidNumber)
+            {
+
+                output = false; 
+            }
+          
+            if(placeNumber < 1)
+            {
+                output = false; 
+            }
+            return output; 
+        }
     }
 }

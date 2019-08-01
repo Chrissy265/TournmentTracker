@@ -1,4 +1,6 @@
-﻿namespace TrackerUI
+﻿using System;
+
+namespace TrackerUI
 {
     partial class CreatePrizeForm
     {
@@ -29,9 +31,9 @@
         private void InitializeComponent()
         {
             this.CreatePrizeHeaderLabel = new System.Windows.Forms.Label();
-            this.PlaceNumberValueTextBox = new System.Windows.Forms.TextBox();
+            this.placeNumberValueTextBox = new System.Windows.Forms.TextBox();
             this.PlaceNumberLabel = new System.Windows.Forms.Label();
-            this.PlaceNameTextbox = new System.Windows.Forms.TextBox();
+            this.PlaceNameValue = new System.Windows.Forms.TextBox();
             this.placeNameLabel = new System.Windows.Forms.Label();
             this.PrizeAmountValue = new System.Windows.Forms.TextBox();
             this.PrizeAmountLabel = new System.Windows.Forms.Label();
@@ -53,13 +55,14 @@
             this.CreatePrizeHeaderLabel.TabIndex = 11;
             this.CreatePrizeHeaderLabel.Text = "Create Prize";
             // 
-            // PlaceNumberValueTextBox
+            // placeNumberValueTextBox
             // 
-            this.PlaceNumberValueTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PlaceNumberValueTextBox.Location = new System.Drawing.Point(237, 98);
-            this.PlaceNumberValueTextBox.Name = "PlaceNumberValueTextBox";
-            this.PlaceNumberValueTextBox.Size = new System.Drawing.Size(183, 39);
-            this.PlaceNumberValueTextBox.TabIndex = 13;
+            this.placeNumberValueTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.placeNumberValueTextBox.Location = new System.Drawing.Point(237, 98);
+            this.placeNumberValueTextBox.Name = "placeNumberValueTextBox";
+            this.placeNumberValueTextBox.Size = new System.Drawing.Size(183, 39);
+            this.placeNumberValueTextBox.TabIndex = 13;
+            //this.placeNumberValueTextBox.TextChanged += new System.EventHandler(this.CreatePrizeButton_Click);
             // 
             // PlaceNumberLabel
             // 
@@ -74,11 +77,11 @@
             // 
             // PlaceNameTextbox
             // 
-            this.PlaceNameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PlaceNameTextbox.Location = new System.Drawing.Point(237, 151);
-            this.PlaceNameTextbox.Name = "PlaceNameTextbox";
-            this.PlaceNameTextbox.Size = new System.Drawing.Size(183, 39);
-            this.PlaceNameTextbox.TabIndex = 15;
+            this.PlaceNameValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PlaceNameValue.Location = new System.Drawing.Point(237, 151);
+            this.PlaceNameValue.Name = "PlaceNameTextbox";
+            this.PlaceNameValue.Size = new System.Drawing.Size(183, 39);
+            this.PlaceNameValue.TabIndex = 15;
             // 
             // placeNameLabel
             // 
@@ -98,6 +101,8 @@
             this.PrizeAmountValue.Name = "PrizeAmountValue";
             this.PrizeAmountValue.Size = new System.Drawing.Size(183, 39);
             this.PrizeAmountValue.TabIndex = 17;
+            this.PrizeAmountValue.Text = "0";
+          
             // 
             // PrizeAmountLabel
             // 
@@ -110,13 +115,14 @@
             this.PrizeAmountLabel.TabIndex = 16;
             this.PrizeAmountLabel.Text = "Prize Amount";
             // 
-            // PrizePercentage
+            // PrizePercentageValue
             // 
             this.PrizePercentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PrizePercentage.Location = new System.Drawing.Point(237, 334);
             this.PrizePercentage.Name = "PrizePercentage";
             this.PrizePercentage.Size = new System.Drawing.Size(183, 39);
             this.PrizePercentage.TabIndex = 19;
+            this.PrizePercentage.Text = "0";
             // 
             // PrizePercentageLabel
             // 
@@ -168,9 +174,9 @@
             this.Controls.Add(this.PrizePercentageLabel);
             this.Controls.Add(this.PrizeAmountValue);
             this.Controls.Add(this.PrizeAmountLabel);
-            this.Controls.Add(this.PlaceNameTextbox);
+            this.Controls.Add(this.PlaceNameValue);
             this.Controls.Add(this.placeNameLabel);
-            this.Controls.Add(this.PlaceNumberValueTextBox);
+            this.Controls.Add(this.placeNumberValueTextBox);
             this.Controls.Add(this.PlaceNumberLabel);
             this.Controls.Add(this.CreatePrizeHeaderLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,9 +192,9 @@
         #endregion
 
         private System.Windows.Forms.Label CreatePrizeHeaderLabel;
-        private System.Windows.Forms.TextBox PlaceNumberValueTextBox;
+        private System.Windows.Forms.TextBox placeNumberValueTextBox;
         private System.Windows.Forms.Label PlaceNumberLabel;
-        private System.Windows.Forms.TextBox PlaceNameTextbox;
+        private System.Windows.Forms.TextBox PlaceNameValue;
         private System.Windows.Forms.Label placeNameLabel;
         private System.Windows.Forms.TextBox PrizeAmountValue;
         private System.Windows.Forms.Label PrizeAmountLabel;

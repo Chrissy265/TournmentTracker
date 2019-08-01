@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrackerLibrary
+namespace TrackerLibrary.Models
 {
     public class PersonModel
     {
@@ -12,9 +12,19 @@ namespace TrackerLibrary
         /// <summary>
         /// Team Member personal information
         /// </summary>
+        /// 
+        public int id { get; set; }
         public string  FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
         public string CellphoneNumber { get; set; }
+
+
+       public string FullName
+        {
+            get { return $"{FirstName} {LastName}";  }
+        }
+        
+
     }
 }

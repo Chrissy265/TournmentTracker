@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrackerLibrary
+namespace TrackerLibrary.Models
 {
-    class TournamentModel
+   public class TournamentModel
     {
+
+        public int Id { get; set; }
         /// <summary>
         /// Tournament Name
         /// </summary>
@@ -21,18 +23,18 @@ namespace TrackerLibrary
         /// <summary>
         /// List the of the teams who entered the tournment
         /// </summary>
-        public List<TeamModel> EnteredTeams { get; set; } = new List<TeamModel>();
+        public List<TrackerLibrary.Models.TeamModel> EnteredTeams { get; set; } = new List<TeamModel>();
 
         /// <summary>
         /// List of the prizes
         /// </summary>
-        public List<PrizeModel> Prizes { get; set; } = new List<PrizeModel>();
+        public List<TrackerLibrary.Models.PrizeModel> Prizes { get; set; } = new List<PrizeModel>();
 
         /// <summary>
         /// Will have the list of the matchups by per round in the tournment
         /// </summary>
 
-        public List<List<MatchupModel>> Rounds { get; set; } = new List<List<MatchupModel>>(); 
+        public List<List<TrackerLibrary.Models.MatchupModel>> Rounds { get; set; } = new List<List<MatchupModel>>(); 
 
 
     

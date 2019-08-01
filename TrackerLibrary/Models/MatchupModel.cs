@@ -11,6 +11,10 @@ namespace TrackerLibrary.Models
         /// <summary>
         /// Represents the list of matchups that are entered in the tournment
         /// </summary>
+        /// 
+
+            //unique identifier
+        public int id { get; set; }
         public List<MatchupEntryModel> Enhtries { get; set; } = new List<MatchupEntryModel>();
 
         /// <summary>
